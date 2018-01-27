@@ -3,15 +3,8 @@ import React, { Component } from 'react';
 class About extends Component {
     render() {
         if (this.props.data) {
-            var description = this.props.data.description;
-            var image = this.props.data.image;
-            var name = this.props.data.name;
-            var street = this.props.data.address.street;
-            var city = this.props.data.address.city;
-            var country = this.props.data.address.country;
-            var phone = this.props.data.phone;
-            var email = this.props.data.email;
-            var resumeDownload = this.props.data.resumeDownload;
+            var { description, image, name, phone, email, resumeDownload } = this.props.data;
+            var { street, city, country } = this.props.data.address;
         }
 
         return (
